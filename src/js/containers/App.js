@@ -1,6 +1,7 @@
 import React from 'react';
 import uuid from 'uuid';
 import style from './App.css';
+import Title from '../components/Title';
 
 class App extends React.Component {
     constructor(props) {
@@ -22,9 +23,13 @@ class App extends React.Component {
         this.setState({data: remainder});
     }
     render() {
+        const appTitle = 'Todo App';
         return (
             <div className={style.TodoApp}>
-                //other components here
+                <Title
+                    title={appTitle}
+                    tasks={this.state.data.length}
+                />
             </div>
         )
     }
