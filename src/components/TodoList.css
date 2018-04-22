@@ -1,0 +1,10 @@
+.TodoList {
+    background-color: #c2c2c2;
+    border-radius: 5px;
+    list-style-type: square;
+    width: 320px;
+}
+
+.Todo {
+    margin: 8px 0;
+}
