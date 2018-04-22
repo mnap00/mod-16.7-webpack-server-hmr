@@ -1,6 +1,6 @@
 {
-  "name": "mod-16.5-webpack-conf-env",
-  "version": "0.5.0",
+  "name": "mod-16.6-webpack-plugins-html-min",
+  "version": "0.6.0",
   "description": "Webpack configuration - per environment",
   "main": "src/index.js",
   "scripts": {
@@ -11,13 +11,14 @@
     "init:files-repo": "shx touch README.md",
     "init:files-src": "shx touch src/index.html src/index.js src/main.css",
     "init:gitignore": "curl https://www.gitignore.io/api/node%2Creactnative > .gitignore",
+    "clean": "shx rm -rf build",
     "lint": "run-s lint:*",
     "lint:css": "stylelint \"src/*.css src/**/*.css !**/vendor/**\"",
     "lint:html": "html5v src/index.html",
     "lint:js": "eslint --ext .js src/",
-    "build": "npm test && shx rm -rf build && run-s build:* && webpack --env production",
+    "build": "run-s clean init:* build:* && webpack --env production",
     "build:html": "shx cp src/index.html build/index.html",
-    "start": "webpack --env development",
+    "start": "run-s clean init:* build:* && webpack --env development",
     "test": "npm run lint"
   },
   "repository": {
