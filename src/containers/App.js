@@ -1,5 +1,7 @@
 import React from 'react';
 import uuid from 'uuid';
+import {hot} from 'react-hot-loader';
+
 import style from './App.css';
 import Title from '../components/Title';
 import TodoList from '../components/TodoList';
@@ -44,4 +46,4 @@ class App extends React.Component {
     }
 }
 
-export default App;
+export default hot(module) (App);

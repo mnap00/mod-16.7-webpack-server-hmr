@@ -18,7 +18,7 @@
     "build": "run-s clean init:* build:* && webpack --env production",
     "build:img": "shx cp -r src/images build/images",
     "build:lib": "shx cp -r src/vendor build/vendor",
-    "start": "run-s clean init:* build:* && webpack-dev-server --env development",
+    "start": "run-s clean init:* build:* && webpack-dev-server --hot --env development",
     "test": "npm run lint"
   },
   "repository": {
@@ -52,6 +52,7 @@
     "optimize-js-plugin": "0.0.4",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-hot-loader": "^4.1.1",
     "shx": "^0.2.2",
     "style-loader": "^0.21.0",
     "stylelint": "^9.2.0",
