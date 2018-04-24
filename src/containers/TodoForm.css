@@ -1,0 +1,23 @@
+.TodoForm {
+    align-items: center;
+    background-color: #c2c2c2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+
+.TodoForm__label {
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 4px;
+}
+
+.TodoForm__input {
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+    flex-grow: 1;
+    font-size: 1em;
+    margin: 4px;
+    padding: 4px;
+}
