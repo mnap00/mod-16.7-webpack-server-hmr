@@ -42,8 +42,10 @@
             "single"
         ],
         "semi": [
-            "error",
-            "always"
+            "warn",
+            "always", {
+                "omitLastInOneLineBlock": true
+            }
         ],
         "react/jsx-uses-vars": 2,
         "react/jsx-uses-react": 2
