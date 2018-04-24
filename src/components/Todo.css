@@ -1,0 +1,9 @@
+.Todo {
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+.Todo:hover {
+    font-weight: 600;
+}
