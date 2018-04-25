@@ -15,10 +15,8 @@
     "lint:css": "stylelint \"src/*.css src/**/*.css !**/vendor/**\"",
     "lint:html": "html5v src/index.html",
     "lint:js": "eslint --ext .js src/",
-    "build": "run-s clean init:* build:* && webpack --env production",
-    "build:img": "shx cp -r src/images build/images",
-    "build:lib": "shx cp -r src/vendor build/vendor",
-    "start": "run-s clean init:* build:* && webpack-dev-server --hot --env development",
+    "build": "webpack --env production",
+    "dev": "webpack-dev-server --hot --env development",
     "test": "npm run lint"
   },
   "repository": {
